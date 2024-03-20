@@ -3,8 +3,10 @@
 local colorscheme = "catppuccin"
 
 if colorscheme == "catppuccin" then
-    vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
-    require("catppuccin").setup()
+    require("catppuccin").setup({
+        flavour = "mocha", -- latte, frappe, macchiato, mocha
+        transparent_background = true, -- disables setting the background color.
+    })
 end
 
 
