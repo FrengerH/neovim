@@ -6,6 +6,7 @@ in
   {
     environment.variables.EDITOR = "nvim";
     environment.systemPackages = with pkgs; [
+      ripgrep
       xclip
       clang-tools_14
       fzf
