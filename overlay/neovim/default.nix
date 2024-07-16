@@ -15,6 +15,7 @@ let
   options = pkgs.writeText "options.lua" (builtins.readFile ./config/options.lua);
   telescope = pkgs.writeText "telescope.lua" (builtins.readFile ./config/telescope.lua);
   treesitter = pkgs.writeText "treesitter.lua" (builtins.readFile ./config/treesitter.lua);
+  bigfile = pkgs.writeText "bigfile.lua" (builtins.readFile ./config/bigfile.lua);
 in
   {
     neovim = super.neovim.override {
@@ -35,6 +36,7 @@ in
           luafile ${options}
           luafile ${telescope}
           luafile ${treesitter}
+          luafile ${bigfile}
         '';
 
         packages.nix = with pkgs.vimPlugins; {
@@ -96,6 +98,9 @@ in
 
             # Harpoon
             harpoon
+
+            #Bigfile
+            bigfile-nvim
           ];
         };
       };
