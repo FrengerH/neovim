@@ -13,7 +13,8 @@ in
       neovim
       nil
       sumneko-lua-language-server
-      php82Packages.psalm
+      php83Packages.psalm
+      nodePackages.intelephense
     ];
 
     nixpkgs.overlays = [ (import ../../overlay/neovim) ];
